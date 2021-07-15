@@ -79,7 +79,6 @@ static int iWiringPiPins[] = {-1,-1,-1,8,-1,9,-1,7,
 			26,23,-1,24,27,25,28,-1,
 			29};
 
-
 // Orange Pi Zero Plus
 static int iOPIZPPins[] = {-1,-1,-1,12,-1,11,-1,6,198,-1,
                         199,1,7,0,-1,3,19,-1,18,15,
@@ -131,15 +130,9 @@ static int iNPNPins[] = {-1,-1,-1,12,-1,11,-1,203,198,-1,
 
 // NanoPi M4
 static int iNPM4Pins[] = {-1,-1,-1,-1,-1,-1,-1,32,145,-1,144,
-            33,50,35,-1,36,54,-1,55,-1,-1,
-            -1,56,-1,-1,-1,149,-1,-1,-1,
-            -1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1};
-
-static int iRockPi4Pins[] = {-1,-1,-1,-1,-1,-1,-1,32,145,-1,144,
-            33,50,35,-1,36,54,-1,55,-1,-1,
-            -1,56,-1,-1,-1,149,-1,-1,-1,
-            -1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1};
-
+			33,50,35,-1,36,54,-1,55,-1,-1,
+			-1,56,-1,-1,-1,149,-1,-1,-1,
+			-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1};
 
 // Tinkerboard
 static int iTinkerPins[] = {-1,-1,-1,252,-1,253,-1,17,161,-1,
@@ -148,10 +141,17 @@ static int iTinkerPins[] = {-1,-1,-1,252,-1,253,-1,17,161,-1,
 			-1,168,239,238,-1,185,223,224,187,-1,
 			188};
 
-static int *iPinLists[] = {ipotatoPins, iBPIZPins, iRPIPins, iOPIZPPins, iOPIZP2ins, iOPIZPins, iOPI1Pins, iOPI1Pins, iNPDPins, iNP2Pins, iNPK2Pins, iNPNPins, iNPNPins, iNPNPins, iNPM4Pins, iNPM4Pins, iRockPi4Pins, iTinkerPins};
-static const char *szBoardNames[] = {"Le potato\n","Banana Pi M2 Zero\n","Raspberry Pi","Orange Pi Zero Plus\n","Orange Pi Zero Plus 2\n","Orange Pi Zero\n","Orange Pi Lite\n","Orange Pi One\n","NanoPi Duo\n", "NanoPi 2\n", "Nanopi K2\n", "NanoPi Neo\n", "NanoPi Air\n", "NanoPi Neo 2\n", "NanoPi M4\n", "NanoPi M4V2\n", "RockPi 4\n", "Tinkerboard\n",NULL};
+// Rockpi 4B
+static int iRockPi4Pins[] = {-1,-1,-1,71,-1,72,-1,75,148,-1,147,
+			146,131,150,-1,149,154,-1,156,40,-1,
+			39,157,41,42,-1,-1,64,65,74,-1,73,
+			112,76,-1,133,132,158,134,-1,135};
+
+static int *iPinLists[] = {ipotatoPins, iBPIZPins, iRPIPins, iOPIZPPins, iOPIZP2ins, iOPIZPins, iOPI1Pins, iOPI1Pins, iNPDPins, iNP2Pins, iNPK2Pins, iNPNPins, iNPNPins, iNPNPins, iNPM4Pins, iNPM4Pins, iTinkerPins, iRockPi4Pins};
+static const char *szBoardNames[] = {"Le potato\n","Banana Pi M2 Zero\n","Raspberry Pi","Orange Pi Zero Plus\n","Orange Pi Zero Plus 2\n","Orange Pi Zero\n","Orange Pi Lite\n","Orange Pi One\n","NanoPi Duo\n", "NanoPi 2\n", "Nanopi K2\n", "NanoPi Neo\n", "NanoPi Air\n", "NanoPi Neo 2\n", "NanoPi M4\n", "NanoPi M4V2\n", "Tinkerboard\n", "Rockpi 4B\n",NULL};
 static int iBoardType;
-static int iPinCount[] = {40,40,40,29,29,29,43,43,32,40,40,40,40,40,40,41,41}; // number of pins in the header
+static int iPinCount[] = {40,40,40,29,29,29,43,43,32,40,40,40,40,40,40,41,41,41}; // number of pins in the header
+
 // GPIO number of on-board IR receiver
 static int iIR_GPIO[] = {7, 0, 0, 363, 363, 363, 363, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
 
